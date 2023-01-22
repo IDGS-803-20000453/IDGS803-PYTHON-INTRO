@@ -1,10 +1,11 @@
- 
+import sys
+
 def main():
     num2=int(input("Escoge tu primer numero "))
     num3=int(input("Escoge tu segundo numero "))
-    menu="1.- Suma || 2.- Resta || 3.-Multiplicacion || 4.-Division|| 5.-Adios"
+    menu="1.- Suma || 2.- Resta || 3.-Multiplicacion || 4.-Division|| 5.-Salir"
     print(menu)
-    num1=int(input("Escoge una opcion "))
+    num1=int(input("Escoge una opcion entre la 1 y la 5: "))
 
     if num1==1:
         sumar(num2,num3)
@@ -16,6 +17,7 @@ def main():
         dividir(num2,num3)
     elif num1==5:
         print("Adios")
+        sys.exit()
     else:
         print("Ingrese un número valido")
         main()
